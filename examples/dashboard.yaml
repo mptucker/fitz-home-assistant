@@ -1,0 +1,19 @@
+# Add cards through Edit dashboard > Add card > Manual.
+# Replace entity IDs with the IDs created for your configured location.
+type: vertical-stack
+cards:
+  - type: weather-forecast
+    entity: weather.lake_texoma_forecast
+    forecast_type: hourly
+  - type: entities
+    title: Fitz · Lake Texoma
+    entities:
+      - sensor.lake_texoma_lake_elevation
+      - sensor.lake_texoma_lake_change_over_24h
+      - sensor.lake_texoma_observed_pressure
+      - sensor.lake_texoma_pressure_trend
+      - sensor.lake_texoma_active_nws_alerts
+      - sensor.lake_texoma_lighthouse_lightning
+  - type: iframe
+    url: https://wx.texomadestinations.com/wx/texoma
+    aspect_ratio: 120%
